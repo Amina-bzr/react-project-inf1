@@ -1,0 +1,107 @@
+/* Watch Page Styling */
+.watch-page {
+    padding: 20px;
+    background-color: #141414;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif; /* Police propre et lisible */
+  }
+  
+  /* Barre de recherche */
+  .search-bar {
+    width: 100%;
+    max-width: 600px; /* Limite la largeur sur grands écrans */
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .search-bar:focus {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.7); /* Effet lumineux rouge Netflix */
+  }
+  
+  /* Grille des films */
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Augmente la taille minimale */
+    gap: 25px; /* Espacement plus grand pour aérer les cartes */
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur totale */
+    margin: 0 auto; /* Centre la grille */
+    padding: 10px; /* Ajoute un léger padding autour */
+  }
+  
+  /* Carte d'un film */
+  .movie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Angles légèrement plus arrondis */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .movie-card:hover img {
+    transform: scale(1.08); /* Zoom subtil pour une meilleure interaction */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Ombre plus marquée */
+  }
+  
+  /* Overlay sombre au hover */
+  .movie-card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay légèrement plus sombre */
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Informations sur le film */
+  .movie-card .movie-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Fond sombre pour lisibilité */
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold; /* Texte plus accrocheur */
+    opacity: 0;
+    transform: translateY(30px); /* Position initiale décalée */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .movie-card:hover .movie-info {
+    opacity: 1; /* Affiche les informations au hover */
+    transform: translateY(0); /* Remonte les informations */
+  }
+  
+  /* Effet supplémentaire sur la carte entière */
+  .movie-card:hover {
+    transform: scale(1.03); /* Agrandit légèrement la carte */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8); /* Ajoute une ombre plus marquée */
+  }
+  
