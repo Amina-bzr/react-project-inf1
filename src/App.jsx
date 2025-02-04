@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Watch from './pages/Watch';
 import MovieDetail from './pages/MovieDetail';
+import Favorites from './pages/Favorites'; 
 import {
   QueryClient,
   QueryClientProvider
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/watch" element={<Watch />} />
           <Route path="/movie/:id" element={<MovieDetail />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </Router>
     </QueryClientProvider>

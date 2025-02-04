@@ -1,24 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../style/Home.css';
+import './Home.css';
 
 function Home() {
   return (
     <div className="home">
       <header className="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" className="logo" />
-        <div className="nav-links">
-          <input type="email" placeholder="Email Address" className="email-input" />
-          <button className="sign-in-btn">Se Connecter</button>
-          <Link to="/watch" className="watch-btn">Watch</Link>
-        </div>
+        <h1 className="logo">MovieApp</h1>
       </header>
       <div className="banner">
-        <h1>Nom de la Série/Film</h1>
-        <p>Description brève...</p>
-        <div className="banner-buttons">
-          <button className="banner-button">Play</button>
-          <button className="banner-button">More Info</button>
+        <div className="banner-content text-left">
+          <h2 className="banner-title">DÉCOUVREZ LE CINÉMA DANS SA PURE EXPRESSION</h2>
+          <p className="banner-subtitle">
+            Explorez des films incontournables et des classiques à redécouvrir.
+          </p>
+          <p className="banner-subtitle">
+            Vivez des moments intenses, chaque film est une aventure qui vous attend.
+          </p>
+          <div className="banner-buttons">
+            <Link to="/watch" className="watch-btn">Watch Now</Link>
+            <Link to="/favorites" className="favorites-btn"> 💖 Mes Favoris</Link> {/* Ajout du bouton Favoris */}
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,43 @@
+.favorites {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .favorite-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .favorite-item {
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .favorite-item img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .favorite-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .favorite-item button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .favorite-item button:hover {
+    background: darkred;
+  }
+  
