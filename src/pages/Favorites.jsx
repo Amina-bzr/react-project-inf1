@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getFavorites, removeFavorite } from "../utils/favorites";
 import { Link } from "react-router-dom";
-import "./Favorites.css";
+import "../style/Favorites.css";
 
 function Favorites() {
   const [favorites, setFavorites] = useState([]);
