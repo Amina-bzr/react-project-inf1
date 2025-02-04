@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { getFavorites, removeFavorite } from "../utils/favorites";
-import { Link } from "react-router-dom";
-import "./Favorites.css";
+import React, { useState, useEffect } from 'react';
+import { getFavorites, removeFavorite } from '../utils/favorites';
+import './Favorites.css';
 
 function Favorites() {
   const [favorites, setFavorites] = useState([]);
@@ -10,29 +9,44 @@ function Favorites() {
     setFavorites(getFavorites());
   }, []);
 
-  const handleRemove = (movieId) => {
+  const handleRemoveFavorite = (movieId) => {
     removeFavorite(movieId);
-    setFavorites(getFavorites()); // Mettre à jour la liste après suppression
+    setFavorites(getFavorites());
   };
 
   return (
     <div className="favorites">
-      <h1>🎬 Mes Films Favoris</h1>
-      {favorites.length === 0 ? (
-        <p>Aucun film ajouté aux favoris.</p>
-      ) : (
-        <div className="favorite-list">
-          {favorites.map((movie) => (
-            <div key={movie.id} className="favorite-item">
-              <Link to={`/movie/${movie.id}`}>
-                <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
-              </Link>
-              <h3>{movie.title}</h3>
-              <button onClick={() => handleRemove(movie.id)}>❌ Retirer</button>
+      <header className="favorites-header">
+        
+        <h1 style={{ color: 'red', fontSize: '2.5rem', textAlign: 'center', marginBottom: '20px' }}>
+          Mes Favoris
+        </h1>
+      </header>
+
+      <div className="favorites-grid">
+        {favorites.length === 0 ? (
+          <p>Aucun film ajouté aux favoris pour le moment.</p>
+        ) : (
+          favorites.map((movie) => (
+            <div className="movie-card" key={movie.id}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title}
+                className="movie-poster"
+              />
+              <div className="movie-info">
+                <h3 className="movie-title">{movie.title}</h3>
+                <button
+                  className="remove-btn"
+                  onClick={() => handleRemoveFavorite(movie.id)}
+                >
+                  Retirer des favoris
+                </button>
+              </div>
             </div>
-          ))}
-        </div>
-      )}
+          ))
+        )}
+      </div>
     </div>
   );
 }
