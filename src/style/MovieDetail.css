@@ -1,0 +1,56 @@
+/* Conteneur principal */
+.movie-detail {
+  color: white;
+  background-color: #141414;
+  padding: 150px 20px 20px; /* Espace suffisant en haut, à gauche, et à droite */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Contenu aligné en haut */
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Titre du film */
+.movie-detail h1 {
+  font-size: 3rem;
+  color: #e50914; /* Couleur Netflix */
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Description */
+.movie-detail p {
+  font-size: 1.3rem;
+  color: #ccc; /* Texte légèrement plus clair */
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.8;
+  max-width: 800px;
+  word-break: break-word; /* Permet de couper les longues phrases ou mots */
+}
+
+/* Liste des détails */
+.movie-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.movie-detail ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+/* Image */
+.movie-detail img {
+  width: 100%;
+  max-width: 400px; /* Limite la largeur de l'image */
+  border-radius: 8px;
+  margin-top: 40px; /* Plus d'espace entre l'image et le texte */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
