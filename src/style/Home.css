@@ -69,6 +69,7 @@ body, html {
   padding-left: 0;
   max-width: 50%;  /* Limiter la largeur du texte à 50% de la page */
   line-height: 1.5;
+  padding-left: 10px;
 }
 
 /* Titre modifié */

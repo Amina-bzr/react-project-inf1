@@ -19,7 +19,6 @@ function Home() {
           </p>
           <div className="banner-buttons">
             <Link to="/watch" className="watch-btn">Watch Now</Link>
-            <Link to="/favorites" className="favorites-btn"> 💖 Mes Favoris</Link> {/* Ajout du bouton Favoris */}
           </div>
         </div>
       </div>

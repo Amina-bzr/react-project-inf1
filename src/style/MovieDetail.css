@@ -1,5 +1,20 @@
-/* Style pour le détail d'un film */
+
+.movie-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  gap:11%;
+  background-color: #141414;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+
 .movie-detail {
+  width: 80%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -10,37 +25,37 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   margin: 20px;
   font-family: 'Arial', sans-serif;
-  position: relative; /* Pour permettre le positionnement absolu du cœur */
+  position: relative; 
 }
 
 .movie-detail img {
-  width: 300px; /* Taille de l'image modérée */
+  max-width: 25%; 
   height: auto;
   border-radius: 10px;
   margin-right: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Ombre portée pour l'image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
 }
 
 .movie-detail h1 {
-  font-size: 2.5em; /* Taille du titre augmentée */
+  font-size: 2.5em; 
   margin-bottom: 20px;
-  color: #e50914; /* Couleur rouge pour le titre */
+  color: #e50914; 
   font-weight: 700;
   text-transform: uppercase;
-  text-align: left; /* Assure que le titre est aligné à gauche */
-  letter-spacing: 3px; /* Espacement des lettres pour un effet moderne */
-  margin-top: 0; /* Enlever la marge du haut */
+  text-align: left; 
+  letter-spacing: 3px; 
+  margin-top: 0;
 }
 
 .movie-detail p {
-  font-size: 1.2em; /* Taille du texte plus grande et plus lisible */
+  font-size: 1.2em; 
   margin: 12px 0;
-  line-height: 1.6; /* Espacement des lignes pour plus de lisibilité */
+  line-height: 1.6; 
 }
 
 .movie-detail p strong {
   font-weight: bold;
-  color: #e50914; /* Couleur rouge pour les éléments importants */
+  color: #e50914; 
 }
 
 .movie-detail .movie-info {
@@ -66,15 +81,15 @@
   border-radius: 8px;
 }
 
-/* Icone cœur en haut à droite et en plus petit format */
+
 .favorite-icon {
   position: absolute;
-  top: 10px; /* Placer le cœur à 10px du haut */
-  right: 10px; /* Placer le cœur à 10px de la droite */
-  font-size: 2rem; /* Taille réduite du cœur */
+  top: 10px; 
+  right: 10px; 
+  font-size: 2rem; 
   cursor: pointer;
 }
 
 .favorite-icon.favorited {
-  color: red; /* Couleur rouge quand ajouté aux favoris */
+  color: red; 
 }
